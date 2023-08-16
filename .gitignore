@@ -1,0 +1,13 @@
+*.idea
+*.iml
+*/target
+*.gradle
+*/bin
+.classpath
+.project
+.settings
+*.versionsBackup
+*.DS_Store
+*.java-version
+target
+bin
