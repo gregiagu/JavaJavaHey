@@ -2,6 +2,9 @@ package io.github.gregiagu;
 
 import org.junit.jupiter.api.Test;
 
+import java.text.NumberFormat;
+import java.util.Locale;
+
 import static org.assertj.core.api.Assertions.*;
 
 public class PrimitiveTest {
@@ -29,7 +32,7 @@ public class PrimitiveTest {
         assertThat(first).isNotNull().isInstanceOf(Object.class);
     }
     @Test
-    void someNumericRanges() {
+    void someNumericIntegerRanges() {
         byte byteNum = Byte.MAX_VALUE + Byte.MIN_VALUE +1;
         short shortNum = Short.MAX_VALUE + Short.MIN_VALUE + 1;
         int intNum = Integer.MAX_VALUE + Integer.MIN_VALUE + 1;
@@ -38,5 +41,33 @@ public class PrimitiveTest {
         assertThat(shortNum).isEqualTo((short) 0);
         assertThat(intNum).isEqualTo(0);
         assertThat(longNum).isEqualTo(0);
+    }
+    @Test
+    void someNumericFloatingPointPrecision() {
+        float floatNum = Float.MAX_VALUE + Float.MIN_VALUE;
+        double doubleNum = Double.MAX_VALUE + Double.MIN_VALUE;
+        assertThat(floatNum).isEqualTo(3.4028235E38f);
+        assertThat(doubleNum).isEqualTo(1.7976931348623157E308);
+    }
+
+    @Test
+    void someBinaryConvert() {
+        int binary = 0b00111010;
+        int decimal = 58;
+        assertThat(binary).isEqualTo(decimal);
+    }
+
+    @Test
+    void numberFormatting() {
+        int kiloNumber = 89_000;
+        int megaNumber = 123_050_238;
+        NumberFormat cni = NumberFormat.getCompactNumberInstance(
+                Locale.ENGLISH,
+                NumberFormat.Style.SHORT
+        );
+        String formattedKilo = cni.format(kiloNumber);
+        String formattedMega = cni.format(megaNumber);
+        assertThat(formattedKilo).isEqualTo("89K");
+        assertThat(formattedMega).isEqualTo("123M");
     }
 }
