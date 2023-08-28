@@ -1,4 +1,4 @@
-package io.github.gregiagu.unit;
+package io.github.gregiagu.primitives;
 
 import org.junit.jupiter.api.Test;
 

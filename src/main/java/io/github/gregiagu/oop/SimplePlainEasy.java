@@ -3,9 +3,9 @@ package io.github.gregiagu.oop;
 import java.io.Serializable;
 
 public class SimplePlainEasy implements Serializable {
-    boolean simple;
-    boolean plain;
-    boolean easy;
+    private boolean simple;
+    private boolean plain;
+    private boolean easy;
 
     public SimplePlainEasy() {
         this.simple = false;
