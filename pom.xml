@@ -5,24 +5,24 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>io.github.gregiagu</groupId>
-  <artifactId>Java17exercises</artifactId>
+  <artifactId>JavaJavaHey</artifactId>
   <version>0.0.0</version>
 
-  <name>Java17exercises</name>
-  <!-- FIXME change it to the project's website -->
+  <name>JavaJavaHey</name>
+  <description>A random sort of java exercises</description>
   <url>https://github.com/gregiagu</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>17</maven.compiler.source>
-    <maven.compiler.target>17</maven.compiler.target>
+    <maven.compiler.source>21</maven.compiler.source>
+    <maven.compiler.target>21</maven.compiler.target>
   </properties>
 
   <dependencies>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter</artifactId>
-      <version>5.9.2</version>
+      <version>5.10.2</version>
       <scope>test</scope>
     </dependency>
     <dependency>

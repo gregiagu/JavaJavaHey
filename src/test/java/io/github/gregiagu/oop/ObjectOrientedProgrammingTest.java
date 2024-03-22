@@ -21,4 +21,34 @@ public class ObjectOrientedProgrammingTest {
                 .isNotEqualTo(secondInstance)
                 ;
     }
+
+    @Test
+    void getTypeFromInterface() {
+        class TypeCl implements TypeInterface {}
+
+        TypeCl typeCl = new TypeCl();
+        TypeInterface interfaced = new TypeCl();
+
+        assertThat(typeCl)
+                .isNotNull()
+                .isInstanceOf(TypeCl.class)
+                .isInstanceOf(TypeInterface.class)
+        ;
+
+        assertThat(interfaced)
+                .isNotNull()
+                .isInstanceOf(TypeCl.class)
+                .isInstanceOf(TypeInterface.class)
+        ;
+    }
+
+    @Test
+    void getTypeFromAbstractClass() {
+        AbstractedClass concreteClass = new ConcreteClass();
+        assertThat(concreteClass)
+                .isNotNull()
+                .isInstanceOf(AbstractedClass.class)
+                .isInstanceOf(ConcreteClass.class)
+                ;
+    }
 }

@@ -19,9 +19,9 @@ public class SortingColors {
     public Long reduceColorMaps(Map<String, Long> colorsHash) {
         return colorsHash.values()
                 .stream()
+                .map(Long::doubleValue)
                 .map(qtd -> qtd / 2.0)
-                .map(Double::intValue)
-                .map(Integer::longValue)
+                .map(Double::longValue)
                 .reduce(
                         0L,
                         Long::sum
