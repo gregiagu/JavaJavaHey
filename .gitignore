@@ -9,5 +9,6 @@
 *.versionsBackup
 *.DS_Store
 *.java-version
+*.vscode
 target
 bin
